@@ -19,14 +19,9 @@ func getLokalTerdaftar(context *gin.Context){
 	defer resp.Body.Close()
 	var j interface{}
     err = json.NewDecoder(resp.Body).Decode(&j)
-	//We Read the response body on the line below.
-	//body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
-	//Convert the body to type string
-	//sb := string("%s", j)
-	//log.Printf(sb)
 	context.IndentedJSON(http.StatusOK, j)
 }
 
