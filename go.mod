@@ -1,4 +1,4 @@
-module go-mining
+module go_mining
 
 go 1.18
 
